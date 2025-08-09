@@ -1,11 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enhanced Form</title>
 </head>
+
 <body>
-    <h1></h1>
+    <h1>My Multiple Section Web Page</h1>
+    <p>This pge demonstrates HTML lists table and forms</p>
+
+    <nav>
+        <ul>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#forms">Forms</a></li>
+        </ul>
+    </nav>
+
+    <section id='lists'>
+        <h2>Here is unodered list of my Skills</h2>
+        <h3>front End Development</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <h3>Back End Development</h3>
+        <ul>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MongoDB</li>
+        </ul>
+
+        <h2>Here is an ordered list of my achievements </h2>
+
+        <ol>
+            <li>Completed a full-stack web development bootcamp.</li>
+            <li>Developed a personal portfolio website.</li>
+            <li>Created Operational Procedure Logs for CIP compliance project.</li>
+            <li>Ensured ISO 17025 compliance in laboratory operations.</li>
+        </ol>
+
+    </section>
+
+    <section id='tables'>
+        <h2>Here is a table of my favorite programming languages</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Language</th>
+                    <th>Type</th>
+                    <th>Popularity</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Front-end</td>
+                    <td>High</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Back-end</td>
+                    <td>High</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>Back-end</td>
+                    <td>Medium</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total Languages: 3</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section id='media'>
+        <h2>Here is an image of my favorite programming language</h2>
+        <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" alt="Placeholder Image"
+            width="150" height="150">
+        <p>This image represents my favorite programming language.</p>
+
+        <h2>Here is a video about web development with Python</h2>
+
+        <video width="320" height="240" autoplay>
+            <source src="https://videos.pexels.com/video-files/2887463/2887463-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="forms">
+        <form action="/submit" method="post">
+            <h2>Contact Form</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="date_of_birth" min="1900-01-01" max="2025-01-01"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">--Select--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="prefer_not">Prefer not to say</option>
+            </select> <br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea><br><br>
+
+            <input type="checkbox" id="subscribe" name="subscribe">
+            <label for="subscribe">Subscribe to newsletter</label><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023. Jack Ganga. PLP Hackathon. All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>
