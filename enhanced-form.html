@@ -9,7 +9,7 @@
 
 <body>
     <h1>My Multiple Section Web Page</h1>
-    <p>This pge demonstrates HTML lists table and forms</p>
+    <p>This page demonstrates HTML lists, tables, media, and forms with full HTML5 validation.</p>
 
     <nav>
         <ul>
@@ -20,117 +20,135 @@
         </ul>
     </nav>
 
-    <section id='lists'>
-        <h2>Here is unodered list of my Skills</h2>
-        <h3>front End Development</h3>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-        <h3>Back End Development</h3>
-        <ul>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
-        </ul>
+    <main>
+        <section id="lists">
+            <h2>Unordered List of My Skills</h2>
+            <h3>Front-End Development</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <h3>Back-End Development</h3>
+            <ul>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+            </ul>
 
-        <h2>Here is an ordered list of my achievements </h2>
+            <h2>Ordered List of My Achievements</h2>
+            <ol>
+                <li>Completed a full-stack web development bootcamp.</li>
+                <li>Developed a personal portfolio website.</li>
+                <li>Created Operational Procedure Logs for CIP compliance project.</li>
+                <li>Ensured ISO 17025 compliance in laboratory operations.</li>
+            </ol>
+        </section>
 
-        <ol>
-            <li>Completed a full-stack web development bootcamp.</li>
-            <li>Developed a personal portfolio website.</li>
-            <li>Created Operational Procedure Logs for CIP compliance project.</li>
-            <li>Ensured ISO 17025 compliance in laboratory operations.</li>
-        </ol>
+        <section id="tables">
+            <h2>Table of My Favorite Programming Languages</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Language</th>
+                        <th>Type</th>
+                        <th>Popularity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Front-end</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Back-end</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>Back-end</td>
+                        <td>Medium</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total Languages: 3</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
 
-    </section>
+        <section id="media">
+            <h2>Image of My Favorite Programming Language</h2>
+            <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg"
+                alt="Code snippet representing my favorite programming language" width="150" height="150">
+            <p>This image represents my favorite programming language.</p>
 
-    <section id='tables'>
-        <h2>Here is a table of my favorite programming languages</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Language</th>
-                    <th>Type</th>
-                    <th>Popularity</th>
-                </tr>
-            </thead>
+            <h2>Video About Web Development with Python</h2>
+            <video width="320" height="240" autoplay muted controls>
+                <source src="https://videos.pexels.com/video-files/2887463/2887463-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
 
-            <tbody>
-                <tr>
-                    <td>JavaScript</td>
-                    <td>Front-end</td>
-                    <td>High</td>
-                </tr>
-                <tr>
-                    <td>Python</td>
-                    <td>Back-end</td>
-                    <td>High</td>
-                </tr>
-                <tr>
-                    <td>Java</td>
-                    <td>Back-end</td>
-                    <td>Medium</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3">Total Languages: 3</td>
-                </tr>
-            </tfoot>
-        </table>
-    </section>
-
-    <section id='media'>
-        <h2>Here is an image of my favorite programming language</h2>
-        <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" alt="Placeholder Image"
-            width="150" height="150">
-        <p>This image represents my favorite programming language.</p>
-
-        <h2>Here is a video about web development with Python</h2>
-
-        <video width="320" height="240" autoplay>
-            <source src="https://videos.pexels.com/video-files/2887463/2887463-hd_1920_1080_25fps.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
-
-    <section id="forms">
-        <form action="/submit" method="post">
+        <section id="forms">
             <h2>Contact Form</h2>
+            <form action="/submit" method="post" autocomplete="on">
+                
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required minlength="3" maxlength="50"><br><br>
 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="date_of_birth" min="1900-01-01" max="2025-01-01" required><br><br>
 
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="date_of_birth" min="1900-01-01" max="2025-01-01"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required><br><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+254700000000" pattern="\+?[0-9]{10,15}" required><br><br>
+                </fieldset>
 
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender" required>
-                <option value="">--Select--</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="prefer_not">Prefer not to say</option>
-            </select> <br><br>
+                <fieldset>
+                    <legend>Message Details</legend>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" placeholder="Enter your message" required></textarea><br><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" placeholder="Enter your message" required minlength="10"></textarea><br><br>
+                </fieldset>
 
-            <input type="checkbox" id="subscribe" name="subscribe">
-            <label for="subscribe">Subscribe to newsletter</label><br><br>
+                <fieldset>
+                    <legend>Preferences</legend>
+                    
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label for="subscribe">Subscribe to newsletter</label><br><br>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+                    <label>Preferred Contact Method:</label><br>
+                    <input type="radio" id="contact-email" name="contact_method" value="email" required>
+                    <label for="contact-email">Email</label>
+
+                    <input type="radio" id="contact-phone" name="contact_method" value="phone">
+                    <label for="contact-phone">Phone</label><br><br>
+
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">--Select your country--</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="uganda">Uganda</option>
+                        <option value="tanzania">Tanzania</option>
+                    </select><br><br>
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2023. Jack Ganga. PLP Hackathon. All rights reserved.</p>
+        <p>&copy; 2025 Jack Ganga. PLP Hackathon. All rights reserved.</p>
     </footer>
-
 </body>
-
 </html>
